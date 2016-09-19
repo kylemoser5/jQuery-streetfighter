@@ -26,14 +26,15 @@ $(document).ready(function() {
 		$('.ryu-ready').show();
 		//ryu goes back to his ready position
 });
-$(document).keydown(function(e) {
-	if (e.which = 88) {
-		$('.ryu-ready').hide();
-		$('.ryu-cool').show();
-	}   
-});
-$(document).keyup(function(e) {
-	if (e.which = 88) {
+$(document).on("keydown", function(e){
+       var code = e.keyCode;
+        if(code == 88){
+        	$('.ryu-still').hide();
+        	$('.ryu-cool').show();
+        }});
+$(document).on("keyup", function(e) {
+	var code = e.keyCode;
+	if (code == 88){
 		$('.ryu-cool').hide();
 		$('.ryu-still').show();
 	}
